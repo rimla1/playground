@@ -15,10 +15,7 @@ const testItems = [
     {price: 5, quan: 4}
 ]
 
-// console.log(calculateTotal())
-// console.log(calculateTotal())
-// console.log(calculateTotal())
-// console.log(calculateTotal())
+
 console.log(calculateTotal(testItems, {}))
 console.log(calculateTotal(testItems, {ship: 0}))
 console.log(calculateTotal(testItems, {dis: .50}))
