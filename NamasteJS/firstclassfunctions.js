@@ -11,6 +11,16 @@ const b = function() {
 // Function Declaration
 
 // Anonymous Function
+const c = function () {
+    console.log('c called')
+    const d = () => {
+        console.log('d called')
+    }
+    return d
+}
+
+const result = c()
+result()
 
 
 // Named Function Expression
