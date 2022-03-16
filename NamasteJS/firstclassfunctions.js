@@ -11,7 +11,7 @@ const b = function() {
 // Function Declaration
 
 // Anonymous Function
-const c = function () {
+const c =  () => {
     console.log('c called')
     const d = () => {
         console.log('d called')
@@ -19,11 +19,15 @@ const c = function () {
     return d
 }
 
-const result = c()
-result()
+
 
 
 // Named Function Expression
+
+const e = function xyz() {
+    console.log('Hello World')
+    console.log(xyz)
+}
 
 // Difference between Parameters & Arguments
 
