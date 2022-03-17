@@ -33,11 +33,25 @@ const e = function xyz() {
 const fullName = (param1, param2) => {
     console.log(`${param1} ${param2}`)
 }
-fullName('Almir', 'Muminovic')
-
-
-
+// fullName('Almir', 'Muminovic')
+// fullName('Edin', 'Muminovic')
+// fullName('Amel', 'Muminovic')
 
 // First Class Functions
+const firstClassFunction = (param1) => {
+    // console.log(param1)
+    // Ability to return a function from a function
+    return () => {
+
+    }
+}
+
+// Ability to pass function to an argument
+// const result = firstClassFunction(() => { })
+console.log(firstClassFunction())
+
 
 // Arrow Functions
+const arrFunction = () => {
+    
+}
