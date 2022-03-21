@@ -21,9 +21,7 @@ console.log(output)
 
 // We can pass function too
 
-const output1 = arr.map((x) => {
-    return x * 3
-})
+const output1 = arr.map((x) =>  x * 3)
 
 console.log(output1)
 
