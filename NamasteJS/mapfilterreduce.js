@@ -19,5 +19,11 @@ const binary = (x) => {
 const output = arr.map(binary)
 console.log(output)
 
+// We can pass function too
 
+const output1 = arr.map((x) => {
+    return x * 3
+})
+
+console.log(output1)
 
