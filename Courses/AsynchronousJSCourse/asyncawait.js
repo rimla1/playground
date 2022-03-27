@@ -7,25 +7,44 @@ let stocks = {
 
 const is_shop_open = true;
 
-const toppings_choice = async () => {
+const time = (ms) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(console.log("What you want as topping?"));
-    }, 3000);
+    if (is_shop_open) {
+      setTimeout(resolve, ms);
+    } else {
+      reject(console.log("shop is closed"));
+    }
   });
 };
 
 const kitchen = async () => {
-  console.log("a");
-  console.log("b");
-  console.log("c");
-  await toppings_choice();
-  console.log("d");
-  console.log("e");
+  try {
+    await time(2000);
+    console.log(`${stocks.Fruits[0]} is selected`);
+
+    await time(0000);
+    console.log("start the production");
+
+    await time(2000);
+    console.log("cut the fruits");
+
+    await time(1000);
+    console.log(`${stocks.Liquid[0]} and ${stocks.Liquid[1]} has been added`);
+
+    await time(1000);
+    console.log("Machine has started");
+
+    await time(2000);
+    console.log(`Icream gets on ${stocks.Holder[0]}`);
+
+    await time(3000);
+    console.log(`Icream received ${stocks.Toppings[1]}`);
+
+    await time(0000);
+    console.log("Ice cream served");
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 kitchen();
-
-console.log("Doing the dishes");
-console.log("Cleaning the tables");
-console.log("Welcoming other guests");
