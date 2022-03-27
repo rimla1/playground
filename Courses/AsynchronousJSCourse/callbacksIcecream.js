@@ -7,18 +7,9 @@ let stocks = {
 
 // We need order of Icecream to start production of Icecream
 
-const order = (
-  Fruit_name,
-  Liquid_name,
-  Holder_name,
-  Toppings_name,
-  call_production
-) => {
+const order = (Fruit_name, call_production) => {
   setTimeout(() => {
     console.log(`${stocks.Fruits[Fruit_name]} was selected`);
-    console.log(`${stocks.Liquid[Liquid_name]} was selected`);
-    console.log(`${stocks.Holder[Holder_name]} was selected`);
-    console.log(`${stocks.Toppings[Toppings_name]} was selected`);
     call_production();
   }, 2000);
 };
@@ -26,10 +17,29 @@ const order = (
 const production = () => {
   setTimeout(() => {
     console.log("production has started");
+
+    setTimeout(() => {
+      console.log("The fruit has been chopped");
+      setTimeout(() => {
+        console.log(`${stocks.Liquid[0]} and ${stocks.Liquid[1]} was added`);
+        setTimeout(() => {
+          console.log("Machine has been started");
+          setTimeout(() => {
+            console.log(`Icecream was placed on ${stocks.Holder[0]}`);
+            setTimeout(() => {
+              console.log(`You choose ${stocks.Toppings[1]}`);
+              setTimeout(() => {
+                console.log("serve ice cream");
+              }, 2000);
+            }, 3000);
+          }, 2000);
+        }, 1000);
+      }, 1000);
+    }, 2000);
   }, 0000);
 };
 
-order(2, 1, 1, 0, production);
+order(2, production);
 
 // Store Room -> Back-end
 // Kitchen -> Front-end
