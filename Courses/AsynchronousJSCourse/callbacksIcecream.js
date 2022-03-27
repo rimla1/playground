@@ -19,8 +19,8 @@ const order = (
     console.log(`${stocks.Liquid[Liquid_name]} was selected`);
     console.log(`${stocks.Holder[Holder_name]} was selected`);
     console.log(`${stocks.Toppings[Toppings_name]} was selected`);
+    call_production();
   }, 2000);
-  call_production();
 };
 
 const production = () => {
