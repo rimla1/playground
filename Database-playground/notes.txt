@@ -1,0 +1,2 @@
+Mongoose ODM (Object Document Mapping)
+Sequilize ORM (Object Relation Mapping)
