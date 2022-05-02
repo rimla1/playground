@@ -2,7 +2,7 @@ const isProgrammerOnVacation = false;
 
 const stateOfProgrammer = (state) => {
   if (!state) {
-    console.log("Bajram 29.04.2022");
+    console.log("Bajram 02.05.2022");
   } else {
     console.log("work!");
   }
