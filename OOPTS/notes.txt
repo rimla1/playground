@@ -1,0 +1,11 @@
+Inheritance - Linking subclasses with superclass
+We have no more methods in subclasses, so we only have to maintain superclass...
+If subclass inheritance something that it shouldn't, we can just overriding it.
+
+Superclass KNOWS its INSTANCE VARIABLES.
+Superclass DOES some METHODS
+
+What's the difference between a class and an object?
+*A class is not an object. But it's used to construct an object.*
+*A class is a blueprint for an object. it tells Typescript how to make an object of each particular type.*
+
