@@ -12,10 +12,19 @@ class Animal {
     makeNoise() {
         console.log("I am making noise.");
     }
+    setX(x) {
+        this.coordX = x;
+    }
+    setY(y) {
+        this.coordY = y;
+    }
 }
 class Dog extends Animal {
     makeNoise() {
         console.log("I am barking");
+    }
+    returnToOwner() {
+        console.log(`I am at (${this.coordX}, ${this.coordY}), and I am returning to owner`);
     }
 }
 class Cat extends Animal {
@@ -27,3 +36,6 @@ const Haski = new Dog();
 Haski.makeNoise();
 const Nidalee = new Cat();
 Nidalee.makeNoise();
+Haski.setX(5);
+Haski.setY(8);
+Haski.returnToOwner();
