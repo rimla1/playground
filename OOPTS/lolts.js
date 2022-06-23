@@ -3,6 +3,16 @@ class Champion {
     ult() {
         console.log(`You have recived a ${this.ultDamage} from ${this.name}`);
     }
+    setQdamage(Qdamage) {
+        if (Qdamage < 0 || Qdamage > 100) {
+            console.log("Damage can not be below 0 or above 100");
+            return;
+        }
+        this.damageOnQ = Qdamage;
+    }
+    getQdamage() {
+        return this.damageOnQ;
+    }
 }
 const diana = new Champion();
 diana.name = "diana";
@@ -18,3 +28,5 @@ nidalee.ultDamage = 10;
 nidalee.ult();
 diana.crush = nidalee;
 diana.crush.ult();
+diana.setQdamage(75);
+console.log(diana.getQdamage());

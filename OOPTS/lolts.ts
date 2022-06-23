@@ -3,12 +3,29 @@ class Champion {
     health: number | undefined
     mana: number | undefined
     ultDamage: number | undefined
-    
     ult() {
         console.log(`You have recived a ${this.ultDamage} from ${this.name}`)
     }
 
+
+
     crush: Champion | undefined
+
+
+
+    private damageOnQ: number | undefined
+
+    setQdamage(Qdamage: number) {
+        if(Qdamage < 0 || Qdamage > 100) {
+            console.log("Damage can not be below 0 or above 100")
+            return;
+        }
+        this.damageOnQ = Qdamage
+    }
+
+    getQdamage() {
+        return this.damageOnQ
+    }
 }
 
 const diana = new Champion()
@@ -27,3 +44,6 @@ nidalee.ult()
 
 diana.crush = nidalee
 diana.crush.ult()
+
+diana.setQdamage(75)
+console.log(diana.getQdamage())
