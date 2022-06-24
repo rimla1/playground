@@ -3,11 +3,15 @@ class Champion {
     health: number | undefined
     mana: number | undefined
     ultDamage: number | undefined
+
     ult() {
         console.log(`You have recived a ${this.ultDamage} from ${this.name}`)
     }
 
-
+    protected role: string | undefined
+    setRole(role: string) {
+        this.role = role
+    }
 
     crush: Champion | undefined
 
@@ -47,3 +51,15 @@ diana.crush.ult()
 
 diana.setQdamage(75)
 console.log(diana.getQdamage())
+
+// class Support extends Champion {
+//     printTheRole(){
+//         console.log(`I am ${this.role} and I have ${this.health} hp`)
+//     }
+// }
+
+// const leona = new Support()
+// leona.health = 500
+// leona.setRole("support")
+
+// leona.printTheRole()

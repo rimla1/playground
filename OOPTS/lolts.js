@@ -3,6 +3,9 @@ class Champion {
     ult() {
         console.log(`You have recived a ${this.ultDamage} from ${this.name}`);
     }
+    setRole(role) {
+        this.role = role;
+    }
     setQdamage(Qdamage) {
         if (Qdamage < 0 || Qdamage > 100) {
             console.log("Damage can not be below 0 or above 100");
@@ -30,3 +33,12 @@ diana.crush = nidalee;
 diana.crush.ult();
 diana.setQdamage(75);
 console.log(diana.getQdamage());
+// class Support extends Champion {
+//     printTheRole(){
+//         console.log(`I am ${this.role} and I have ${this.health} hp`)
+//     }
+// }
+// const leona = new Support()
+// leona.health = 500
+// leona.setRole("support")
+// leona.printTheRole()
