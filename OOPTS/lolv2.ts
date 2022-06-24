@@ -8,11 +8,20 @@ class Champ {
     setRole(role: string) {
         this.role = role
     }
+
+    voice() {
+        console.log('I am peeling you!')
+    }
 }
 
 class Supp extends Champ {
     printInfoAboutSupport() {
         console.log(`Hello, I am ${this.name}, and my role is: ${this.role}`)
+    }
+
+    voice() {
+        console.log(`You received a message from: ${this.name}, and the message is: `)
+        super.voice()
     }
 }
 
@@ -33,3 +42,4 @@ lulu.name = "Lulu"
 lulu.setRole("Support")
 lulu.whatSupportIsDoing()
 lulu.printInfoAboutSupport()
+lulu.voice()
