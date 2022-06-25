@@ -1,18 +1,23 @@
 class Character{
-    
-}
-
-class Mario {
-    move() {}
+    move() {
+        console.log("I'm moving")
+    }
     playVoiceRecording() {}
 }
 
-class Luigi {
-    move() {}
-    playVoiceRecording() {}
+class Mario extends Character{
+
 }
 
-class Peach {
-    move() {}
-    playVoiceRecording() {}
+class Luigi extends Character{
+
 }
+
+class Peach extends Character{
+    move() {
+        console.log("I'm flying")
+    }
+}
+
+const peachh = new Peach()
+peachh.move()
