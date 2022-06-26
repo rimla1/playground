@@ -1,6 +1,6 @@
 class LOLCHAMPION {
-    health: number | undefined
-    experience: number | undefined
+    health: number 
+    experience: number 
 
     attack() {
         console.log("I'm attacking!")
@@ -15,17 +15,36 @@ class LOLCHAMPION {
 }
 
 class ADC extends LOLCHAMPION {
-
+    arrows: number
+    attack() {
+        super.attack()
+        console.log("Firing an arrow")
+        this.arrows -= 1
+    }
 }
 
 class MID extends LOLCHAMPION {
-
+    mana: number
+    attack(){
+        super.attack()
+        console.log("Casting an ability")
+        this.mana -= 1
+    }
 }
 
 class TOP extends LOLCHAMPION {
-    
+    energy: number
+    attack(){
+        super.attack()
+        console.log("Throwing a rock")
+        this.energy -= 1
+    }
 }
 
 const ashe = new ADC()
 const ryze = new MID()
 const gnar = new TOP()
+
+ashe.attack()
+ryze.attack()
+gnar.attack()
