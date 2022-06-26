@@ -1,23 +1,31 @@
-class Character{
+class LOLCHAMPION {
+    health: number | undefined
+    experience: number | undefined
+
+    attack() {
+        console.log("I'm attacking!")
+    }
     move() {
         console.log("I'm moving")
     }
-    playVoiceRecording() {}
-}
 
-class Mario extends Character{
-
-}
-
-class Luigi extends Character{
-
-}
-
-class Peach extends Character{
-    move() {
-        console.log("I'm flying")
+    regen() {
+        console.log("I'm regenerating")
     }
 }
 
-const peachh = new Peach()
-peachh.move()
+class ADC extends LOLCHAMPION {
+
+}
+
+class MID extends LOLCHAMPION {
+
+}
+
+class TOP extends LOLCHAMPION {
+    
+}
+
+const ashe = new ADC()
+const ryze = new MID()
+const gnar = new TOP()
