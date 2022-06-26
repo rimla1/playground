@@ -34,6 +34,19 @@ class TOP extends LOLCHAMPION {
 const ashe = new ADC();
 const ryze = new MID();
 const gnar = new TOP();
-ashe.attack();
-ryze.attack();
-gnar.attack();
+// ashe.attack()
+// ryze.attack()
+// gnar.attack()
+class BlueTeam {
+    setLolChamps(lolchampions) {
+        this.lolchamps = lolchampions;
+    }
+    attack() {
+        for (let lolchamp of this.lolchamps) {
+            lolchamp.attack();
+        }
+    }
+}
+const skt = new BlueTeam();
+skt.setLolChamps([ashe, ryze, gnar]);
+skt.attack();

@@ -21,6 +21,10 @@ class ADC extends LOLCHAMPION {
         console.log("Firing an arrow")
         this.arrows -= 1
     }
+
+    // SomeUniqueMethodJustForAdc() {
+    //     console.log("Bonus Armor")
+    // }
 }
 
 class MID extends LOLCHAMPION {
@@ -41,10 +45,29 @@ class TOP extends LOLCHAMPION {
     }
 }
 
-const ashe = new ADC()
-const ryze = new MID()
-const gnar = new TOP()
+const ashe: LOLCHAMPION = new ADC()
 
-ashe.attack()
-ryze.attack()
-gnar.attack()
+const ryze: LOLCHAMPION = new MID()
+const gnar: LOLCHAMPION = new TOP()
+
+// ashe.attack()
+// ryze.attack()
+// gnar.attack()
+
+class BlueTeam {
+    private lolchamps: LOLCHAMPION[]
+
+    setLolChamps(lolchampions: LOLCHAMPION[]){
+        this.lolchamps = lolchampions
+    }
+
+    attack() {
+        for (let lolchamp of this.lolchamps){
+            lolchamp.attack();
+        }
+    }
+}
+
+const skt = new BlueTeam()
+skt.setLolChamps([ashe, ryze, gnar])
+skt.attack()
