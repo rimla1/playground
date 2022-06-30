@@ -23,3 +23,5 @@ class Tristana implements Yorlde, Adcarry {
        this.hunger -= 1
     }
 }
+
+const tristanaAdc = new Tristana()
