@@ -1,4 +1,10 @@
 class Character {
+
+    constructor(hunger: number, health: number){
+        this.health = health
+        this.hunger = hunger
+    }
+
     private hunger: number
     private health: number
 
@@ -7,7 +13,7 @@ class Character {
     }
 
     setHealth(health: number): void{
-        this.hunger = health
+        this.health = health
     }
 
     getHunger(): number {
@@ -15,13 +21,12 @@ class Character {
     }
 
     getHealth(): number {
-        return this.hunger
+        return this.health
     }
 }
 
-const jeff = new Character()
-jeff.setHealth(100)
-jeff.setHunger(100)
+const jeff = new Character(200, 500)
+
 
 console.log(jeff.getHealth())
 console.log(jeff.getHunger())
