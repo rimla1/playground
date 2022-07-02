@@ -25,8 +25,27 @@ class Character {
     }
 }
 
-const jeff = new Character(200, 500)
+class SuperHero extends Character {
+    private heroId: number
 
+    constructor(heroId: number, hunger: number, health: number){
+        super(hunger, health)
+        this.heroId = heroId
+    }
 
-console.log(jeff.getHealth())
-console.log(jeff.getHunger())
+    setHeroId(heroId: number){
+        this.heroId = heroId
+    }
+
+    getHeroId(){
+        return this.heroId
+    }
+}
+
+const betmen = new SuperHero(575748383, 100, 100)
+
+const printHeroInfo = (hero: SuperHero) => {
+    console.log(`Hello my id is: ${hero.getHeroId()}, my health is: ${hero.getHealth()} and my hunger is: ${hero.getHunger()}`)
+}
+
+printHeroInfo(betmen)
