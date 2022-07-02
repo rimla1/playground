@@ -8,6 +8,14 @@ class OnePieceChars {
 }
 // 2. Subclasses [More specific version of a class that already exist, they are passin IS-A test]
 class Admirals extends OnePieceChars {
+    moto() {
+        console.log("Justice");
+    }
+}
+class Pirates extends OnePieceChars {
+    moto() {
+        console.log("Take all treasure");
+    }
 }
 class Warlords extends OnePieceChars {
 }
