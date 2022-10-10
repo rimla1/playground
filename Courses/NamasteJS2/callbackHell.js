@@ -1,3 +1,7 @@
 console.log("Namaste");
-console.log("JavaScript");
+
+setTimeout(() => {
+  console.log("JavaScript");
+}, 5000);
+
 console.log("Season 2");
