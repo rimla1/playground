@@ -1,9 +1,19 @@
-const cart = ["t-shirt", "shoes", "pants"];
+const fetch = require("node-fetch");
 
-// Callbacks approach
-createOrder(cart) // result[orderId]
+// const cart = ["t-shirt", "shoes", "pants"];
 
-() => {
-    
-}
-proceedToPayment()
+// // Callbacks approach
+// createOrderCB(cart, (orderId) => {
+//     proceedToPaymentCB(orderId)
+// }) // result[orderId]
+
+// // Promises approach
+// createOrderPromise(cart).then((orderId) => {
+//     proceedToPaymentPromise(orderId)
+// })
+
+const GITHUB_API = "https://api.github.com/users/rimla1";
+
+const user = fetch(GITHUB_API);
+
+console.log(user);
