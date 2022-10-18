@@ -12,11 +12,11 @@ createOrderCB(cart, (orderId) => {
 // Promises approach
 createOrderPromise(cart)
   .then((orderId) => {
-    proceedToPaymentPromise(orderId);
+    return proceedToPaymentPromise(orderId);
   })
   .then((paymentInfo) => {
-    orderSummary(paymentInfo);
+    return orderSummary(paymentInfo);
   })
   .then(() => {
-    updateWallet();
+    return updateWallet();
   });
